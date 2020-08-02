@@ -12,6 +12,7 @@ namespace TR2Randomizer
         public static event EventHandler LevelProgressChanged;
         public static event EventHandler CanRandomizeChanged;
         public static event EventHandler AllowHardChanged;
+        public static event EventHandler AllowHiddenChanged;
 
         private static int _LevelProgress;
         public static int LevelProgress 
@@ -54,6 +55,21 @@ namespace TR2Randomizer
                     _AllowHard = value;
 
                     AllowHardChanged?.Invoke(null, EventArgs.Empty);
+                }
+            }
+        }
+
+        private static bool _AllowHidden;
+        public static bool AllowHidden
+        {
+            get { return _AllowHidden; }
+            set
+            {
+                if (value != _AllowHidden)
+                {
+                    _AllowHidden = value;
+
+                    AllowHiddenChanged?.Invoke(null, EventArgs.Empty);
                 }
             }
         }

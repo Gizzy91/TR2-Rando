@@ -58,6 +58,7 @@
             <Label Content="Note: Ensure this tool is placed in a directory containing all level files" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="10" Grid.Row="4" Grid.ColumnSpan="1" Visibility="Hidden"/>
 
             <CheckBox Name="EnableHardCheckBox" Content="Enable Hard Secrets" Grid.Row="1" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="5" MaxWidth="275" IsChecked="{Binding Path=(local:ReplacementStatusManager.AllowHard)}"/>
+            <CheckBox Name="EnableHiddenCheckBox" Content="Enable Hidden Items" Grid.Row="2" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="5" MaxWidth="275" IsChecked="{Binding Path=(local:ReplacementStatusManager.AllowHidden)}"/>
 
             <ComboBox Name="LocationType" Grid.Row="4" Grid.Column="0" VerticalAlignment="Top" HorizontalAlignment="Left" SelectedIndex="0" Visibility="Hidden">
                 <ComboBoxItem Content="Secrets"/>
@@ -89,6 +90,7 @@
 
             <Button Name="TextureInject" Grid.Column="0" Grid.Row="4" VerticalAlignment="Bottom" HorizontalAlignment="Center" Content="Texture Injection Test" Click="TextureInject_Click" Visibility="Hidden"/>
             <TextBox Name="PackDirectory" Grid.Column="0" Grid.Row="4" VerticalAlignment="Bottom" HorizontalAlignment="Left" MinHeight="20" MaxHeight="20" MinWidth="200" MaxWidth="200" Visibility="Hidden"/>
+
         </Grid>
     </DockPanel>
 </Window>
